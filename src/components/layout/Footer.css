@@ -1,0 +1,109 @@
+/* Footer container */
+footer {
+    background-color: #1f2937; /* Tailwind's bg-gray-800 */
+    color: #ffffff; /* Tailwind's text-white */
+    padding: 1.5rem 0; /* Tailwind's py-6 */
+    margin-top: 2rem; /* Tailwind's mt-12 */
+}
+
+/* Grid layout */
+footer .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* Tailwind's gap-6 */
+    padding-left: 1rem; 
+
+}
+
+@media (min-width: 640px) {
+    footer .container {
+        grid-template-columns: repeat(2, 1fr); /* Tailwind's sm:grid-cols-2 */
+    }
+}
+
+@media (min-width: 768px) {
+    footer .container {
+        grid-template-columns: repeat(3, 1fr); /* Tailwind's md:grid-cols-3 */
+    }
+}
+
+@media (min-width: 1024px) {
+    footer .container {
+        grid-template-columns: repeat(4, 1fr); /* Tailwind's lg:grid-cols-4 */
+    }
+}
+
+/* Section headings */
+footer h3 {
+    font-weight: 600; /* Tailwind's font-semibold */
+    font-size: 1.125rem; /* Tailwind's text-lg */
+    margin-bottom: 1rem; /* Tailwind's mb-4 */
+}
+
+/* Links */
+footer ul {
+    display: flex; /* Arrange links in a row */
+    gap: 4rem; /* Add spacing between links */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+footer a {
+    color: #d1d5db; /* Tailwind's text-gray-300 */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff; /* Tailwind's hover:text-white */
+}
+
+/* Social media icons */
+footer .flex {
+    display: flex; /* Ensure the icons are in a row */
+    gap: 1rem; /* Add spacing between icons */
+}
+footer .flex a {
+    font-size: 4rem; /* Adjust icon size */
+}
+
+footer .flex a:hover {
+    color: #ffffff; /* Tailwind's hover:text-white */
+}
+
+/* Newsletter input */
+footer .newsletter {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    width: 100%; /* Ensure both input and button take the same width */
+    
+}
+footer input[type="email"] {
+    width: 100%;
+    padding: 0.5rem 1rem; /* Tailwind's py-2 px-4 */
+    border-radius: 9999px; /* Tailwind's rounded-full */
+    color: #374151; /* Tailwind's text-gray-700 */
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Newsletter button */
+footer button {
+    margin-top: 0.5rem; /* Tailwind's mt-2 */
+    background-color: #ea580c; /* Tailwind's bg-orange-600 */
+    color: #ffffff; /* Tailwind's text-white */
+    width: 100%;
+    padding: 0.5rem 0; /* Tailwind's py-2 */
+    border-radius: 9999px; /* Tailwind's rounded-full */
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+   
+}
+
+footer button:hover {
+    background-color: #c2410c; /* Tailwind's hover:bg-orange-700 */
+}

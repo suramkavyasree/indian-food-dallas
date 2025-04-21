@@ -1,0 +1,107 @@
+/* Rating Form */
+.review-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+  }
+  
+  .star-row {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .star-icon {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .star-icon.filled {
+    color: #ffc107; /* Yellow */
+  }
+  
+  .form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    background-color: #e67300;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #cc6600;
+  }
+  
+  /* Review List */
+  .review-list-container {
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  
+  .review-list-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 14px;
+  }
+  
+  .review-card {
+    background-color: #f9f9f9;
+    border-left: 4px solid #e67300;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  
+  .review-comment {
+    margin-top: 8px;
+    font-style: italic;
+    color: #555;
+  }
+  .star-icon {
+    font-size: 24px;
+    color: #ccc; /* Default gray */
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .star-icon.filled {
+    color: #FFD700; /* Yellow when selected */
+  }
+  
+
+  

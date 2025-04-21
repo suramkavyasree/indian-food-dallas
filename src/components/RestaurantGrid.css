@@ -1,0 +1,42 @@
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* same as Tailwind gap-6 */
+    margin-bottom: 2rem;
+    margin-top: 2rem; /* spacing below header */
+    padding: 0 1rem;
+  }
+  /* Target the Add button inside the grid and push it to the last row */
+.restaurant-grid > .text-center {
+  grid-column: 1 / -1; /* Span full width of the grid */
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.restaurant-grid > .text-center button {
+  background-color: orange; /* Tailwind blue-500 */
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+  
+  @media (min-width: 640px) {
+    .restaurant-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .restaurant-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
