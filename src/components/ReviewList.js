@@ -29,16 +29,17 @@ export default function ReviewList({ restaurantId, refreshTrigger }) {
   return (
     <div className="review-list">
       {reviews.map((review) => (
-        <div key={review.id} className="review-card">
-          <p className="review-comment">"{review.comment}"</p>
-          <p className="review-meta">
-            Taste: {review.rating_taste}/5 | 
-            Service: {review.rating_service}/5 | 
-            Cleanliness: {review.rating_cleanliness}/5 | 
-            Authenticity: {review.rating_authenticity}/5
-          </p>
-        </div>
-      ))}
+      <div key={review.id} className="review-card">
+      <p className="review-comment">&quot;{review.comment}&quot;</p>
+      <p className="review-meta">
+      Taste: {review.rating_taste}/5 | 
+      Service: {review.rating_service}/5 | 
+      Cleanliness: {review.rating_cleanliness}/5 | 
+      Authenticity: {review.rating_authenticity}/5
+    </p>
+  </div>
+))}
+
     </div>
   );
 }

@@ -38,19 +38,27 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
+    // Ensure all ratings are between 1 and 5
+    const isValid = ['taste', 'service', 'cleanliness', 'authenticity'].every(
+      (key) => ratings[key] >= 1 && ratings[key] <= 5
+    );
+  
+    if (!isValid) {
+      alert('Please provide a rating (1–5) for all categories.');
+      return;
+    }
+  
     try {
-      const { data, error } = await supabase
-        .from('reviews')
-        .insert([
-          {
-            restaurant_id: restaurantId,
-            rating_taste: ratings.taste,  // Map to rating_taste
-            rating_service: ratings.service,  // Map to rating_service
-            rating_cleanliness: ratings.cleanliness,  // Map to rating_cleanliness
-            rating_authenticity: ratings.authenticity,  // Map to rating_authenticity
-            comment: ratings.comment,
-          },
-        ]);
+      const { data, error } = await supabase.from('reviews').insert([
+        {
+          restaurant_id: restaurantId,
+          rating_taste: ratings.taste,
+          rating_service: ratings.service,
+          rating_cleanliness: ratings.cleanliness,
+          rating_authenticity: ratings.authenticity,
+          comment: ratings.comment,
+        },
+      ]);
   
       if (error) throw error;
   
@@ -67,6 +75,7 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
       console.error('❌ Supabase insert error:', error.message, error.details || error);
     }
   };
+  
   
   return (
     <form onSubmit={handleSubmit} style={{ marginTop: '20px' }}>
